@@ -1,5 +1,6 @@
 from microbit import *
 import random
+#when micro:bit is shook it will randomly select a number 1-12
 
 def show_dice_face(face):
     if face == 0:
