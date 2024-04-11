@@ -36,11 +36,11 @@ def show_dice_face(face):
     elif face == 5:
         display.show(Image("90009:"
                            "00000:"
-                           "90909:"
+                           "90009:"
                            "00000:"
                            "90009"))
     elif face == 6:
-        display.show(Image("90909:"
+        display.show(Image("90009:"
                            "00000:"
                            "90909:"
                            "00000:"
@@ -48,45 +48,39 @@ def show_dice_face(face):
     elif face == 7:
         display.show(Image("90909:"
                            "00000:"
-                           "90909:"
+                           "90009:"
                            "00000:"
                            "90909"))
     elif face == 8:
         display.show(Image("90909:"
-                           "00000:"
-                           "99999:"
-                           "00000:"
+                           "00090:"
+                           "00900:"
+                           "09000:"
                            "90909"))
     elif face == 9:
-        display.show(Image("99999:"
-                           "00000:"
-                           "90909:"
-                           "00000:"
-                           "99999"))
+        display.show(Image("90009:"
+                           "09090:"
+                           "90009:"
+                           "09090:"
+                           "90009"))
     elif face == 10:
-        display.show(Image("99999:"
-                           "00000:"
+        display.show(Image("90009:"
+                           "09090:"
                            "90909:"
-                           "00000:"
-                           "99999"))
-    elif face == 11:
-        display.show(Image("99999:"
-                           "00000:"
-                           "90909:"
-                           "00000:"
-                           "99999"))
+                           "09090:"
+                           "90009"))
     else:
-        display.show(Image("99999:"
-                           "00000:"
-                           "90909:"
-                           "00000:"
-                           "99999"))
+        display.show(Image("90909:"
+                           "09090:"
+                           "90009:"
+                           "09090:"
+                           "90909"))
 
 while True:
     if accelerometer.was_gesture('shake'):
         for i in range(10):
-            roll = random.randint(0, 12)
+            roll = random.randint(0, 11)
             show_dice_face(roll)
             sleep(100)
-        final_roll = random.randint(0, 12)
+        final_roll = random.randint(0, 11)
         show_dice_face(final_roll)
